@@ -1,0 +1,37 @@
+{
+  "name": "express-babel-starter",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "git@github.com:kjs3/express-babel-starter.git",
+  "author": "Kenny Smith <mail@kjs3.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "~6.8.1"
+  },
+  "scripts": {
+    "dev": "nodemon src/server-bootstrap.js --exec 'node -r dotenv/config -r babel-register --inspect'",
+    "test": "NODE_ENV=test mocha -r dotenv/config -r babel-register --recursive test",
+    "test:watch": "NODE_ENV=test mocha -r dotenv/config -r babel-register --recursive --watch --no-exit test",
+    "start": "node -r dotenv/config -r babel-register src/server-bootstrap.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-register": "^6.24.0",
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "debug": "^2.6.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "helmet": "^3.5.0",
+    "marko": "^4.1.2",
+    "morgan": "^1.8.1",
+    "source-map-support": "^0.4.14"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
